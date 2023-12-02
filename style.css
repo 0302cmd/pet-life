@@ -211,3 +211,73 @@ footer p a {
   color: #ff9a6c;
   text-decoration: none;
 }
+/* Por exemplo, para telas menores que 768px */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 14px; /* Ajustar o tamanho da fonte */
+  }
+
+  header {
+    padding: 24px; /* Reduzir o padding do cabeçalho */
+  }
+
+  /* Ajustes para o cabeçalho */
+  header nav a {
+    padding: 16px; /* Reduzir o espaçamento dos links no cabeçalho */
+  }
+
+  /* Ajustes para a seção #inicio */
+  #inicio {
+    flex-direction: column; /* Alterar a direção dos elementos */
+    padding: 64px 24px; /* Ajustar o padding */
+  }
+
+  #clinica {
+    flex-direction: column; /* Alterar a direção dos elementos */
+    padding: 64px 24px; /* Ajustar o padding */
+  }
+
+  /* Ajustes para a seção #clinica */
+  #farmacia {
+    flex-direction: column; /* Alterar a direção dos elementos */
+    padding: 64px 24px; /* Ajustar o padding */
+  }
+  #duvidas {
+    flex-direction: column; /* Alterar a direção dos elementos */
+    padding: 44px 24px; /* Ajustar o padding */
+  }
+  footer {
+    flex-direction: column; /* Alterar a direção dos elementos */
+    padding: 64px 24px; /* Ajustar o padding */
+  }
+
+  .button-inicio {
+    display: flex;
+    flex-direction: column; /* Alterar a direção dos elementos */
+    padding: 64px 24px; /* Ajustar o padding */
+  }
+
+  /* Ajustes para as imagens principais */
+  .img-principais {
+    width: 100%; /* Definir a largura da imagem como 100% da largura do contêiner pai */
+    height: auto; /* Permitir que a altura se ajuste automaticamente mantendo a proporção */
+    max-width: 100%; /* Garantir que a imagem não ultrapasse a largura do contêiner */
+    margin: 0; /* Remover margens, se necessário */
+  }
+
+  .seta {
+    width: 10%;
+  }
+  .logo {
+    width: 60%;
+  }
+
+  .logo-nav {
+    width: 200%;
+  }
+
+  header a {
+    display: flex;
+    flex-direction: row;
+  }
+}
