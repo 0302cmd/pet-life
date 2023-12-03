@@ -280,4 +280,104 @@ footer p a {
     display: flex;
     flex-direction: row;
   }
+
+  /* menu hamburguer*****************************************************************/
+  header {
+    position: fixed; /* Importante para manter o contexto de posicionamento */
+    padding: 24px;
+    position: sticky;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Adicione um índice Z para que a barra de navegação fique acima dos cards */
+  }
+  header a {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 15px;
+    right: 30px;
+    height: 40px;
+    width: 70px;
+    line-height: 70px;
+    font-size: 30px;
+    cursor: pointer;
+    background: #ff9a6c;
+    color: #ffffff;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  #menu-btn.fa-times {
+    position: fixed;
+    margin-top: 20px;
+    transform: rotate(180deg);
+    background: #000;
+
+    width: 40px;
+    align-items: center;
+    border-radius: 40px;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    height: 50%;
+    width: 100%;
+    background: #ff9a6c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding-bottom: 50px;
+    clip-path: circle(0% at 95.3% 8.5%);
+  }
+
+  .navbar.active {
+    clip-path: circle(140% at 95.3% 8.5%);
+    margin-top: 0; /* Remova ou ajuste conforme necessário */
+    height: 55vh; /* Define a altura para cobrir a tela inteira */
+  }
+  .navbar a {
+    margin-top: 0px;
+    font-size: 25px;
+    padding-bottom: 30px;
+    color: #000;
+  }
+
+  .navbar a::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5em;
+    color: #000;
+    pointer-events: none;
+    font-weight: bolder;
+    letter-spacing: 0.4em;
+    opacity: 0;
+    z-index: -1;
+    align-items: center;
+  }
+
+  .navbar a:hover::before {
+    letter-spacing: 0em;
+    opacity: 0.1;
+    transition: 0.3s ease-out;
+  }
+}
+@media screen and (min-width: 545px) {
+  #menu-btn {
+    display: none;
+  }
 }

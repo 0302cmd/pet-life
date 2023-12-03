@@ -6,20 +6,26 @@
   <title>PetLife</title>
   <meta name="description" content="Garanta uma vida longa e cheia de alegria para o seu melhor amigo">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/logo.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
 
 <body>
   <header>
-    <a href="index.html">
-      <img class="logo-nav" src="img/logo-white.svg" alt="PetLife">
-    </a>
+    <div>
+      <a href="index.html">
+        <img class="logo-nav" src="img/logo-white.svg" alt="PetLife">
+      </a>
+    </div>
+    <div id="menu-btn" class="fas fa-bars"></div>
 
-    <nav>
+    <nav class="navbar">
+
       <a href="#inicio">Início</a>
       <a href="#clinica">Clínica</a>
       <a href="#farmacia">Farmácia</a>
@@ -134,5 +140,11 @@
     na trilha Start na Programação da OneBiteCode.
   </div>
 </body>
+<script>
+  document.querySelector('#menu-btn').onclick = () => {
+    document.querySelector('#menu-btn').classList.toggle('fa-times');
+    document.querySelector('.navbar').classList.toggle('active');
+  }
+</script>
 
 </html>
